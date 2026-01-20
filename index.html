@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de Cumpleaños - ¡Miriam cumple 26!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Pantalla de bienvenida -->
+    <div id="welcome-screen" class="welcome-screen">
+      <h1>¡Feliz Cumpleaños Miriam!</h1>
+      <span class="birthday-age">26</span>
+      <p>
+        ¿Cuánto conoces a la cumpleañera?<br>
+        Responde estas preguntas y descúbrelo.
+      </p>
+      <p class="prize-message">Si ganas el concurso conseguirás un premio especial</p>
+      <button id="start-btn" class="btn">¡Empezar!</button>
+    </div>
+
+    <!-- Contenedor del quiz -->
+    <div id="quiz-container" class="quiz-container">
+      <!-- Barra de progreso -->
+      <div class="progress-container">
+        <div id="progress-text" class="progress-text">Pregunta 1 de 20</div>
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- Pregunta -->
+      <div class="question-container">
+        <h2 id="question-text" class="question-text"></h2>
+      </div>
+
+      <!-- Respuestas -->
+      <div id="answers-container" class="answers-container">
+        <!-- Las respuestas se generan dinámicamente -->
+      </div>
+
+      <!-- Botón siguiente -->
+      <div class="next-container">
+        <button id="next-btn" class="btn btn-next" disabled>Siguiente</button>
+      </div>
+    </div>
+
+    <!-- Pantalla de resultados -->
+    <div id="results-screen" class="results-screen">
+      <h2>¡Has terminado!</h2>
+      <div id="score-display" class="score-display">0/20</div>
+      <p id="score-message" class="score-message"></p>
+      <p>¡Gracias por jugar y celebrar con Miriam!</p>
+
+      <div class="answers-summary">
+        <h3>Respuestas correctas:</h3>
+        <div id="answers-list" class="answers-list"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
